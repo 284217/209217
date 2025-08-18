@@ -1,0 +1,258 @@
+/* ===== MOMENTUS Theme Colors ===== */
+:root {
+    --primary-color: #111;
+    --accent-color: #ff9800;
+    --text-light: #fff;
+}
+
+/* ===== Global Styling ===== */
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f8f9fa;
+}
+
+/* ===== Header ===== */
+.navbar {
+    background-color: var(--primary-color);
+}
+
+/* Responsive logo image size */
+.logo-img {
+    max-width: 120px; /* Default for desktops */
+    height: auto;     /* Maintain aspect ratio */
+}
+
+/* Medium devices (tablets) */
+@media (max-width: 992px) {
+    .logo-img {
+        max-width: 100px;
+    }
+}
+
+/* Small devices (large phones) */
+@media (max-width: 768px) {
+    .logo-img {
+        max-width: 80px;
+    }
+}
+
+/* Extra small devices (small phones) */
+@media (max-width: 576px) {
+    .logo-img {
+        max-width: 60px;
+    }
+}
+
+.navbar-brand img {
+    height: 100px;
+}
+
+.nav-link {
+    color: var(--text-light) !important;
+    font-weight: 500;
+}
+.nav-link:hover {
+    color: var(--accent-color) !important;
+}
+
+/* ===== Footer ===== */
+.footer {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--primary-color);
+    color: var(--text-light);
+    padding: 20px 0  ;
+}
+.footer-top{
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Center both logo and icons together */
+    align-items: center;
+    flex-wrap: wrap; 
+    gap: 2px; /* Space between logo and social links */
+    margin-bottom: 10px;
+}
+
+.footer-top-row {
+    padding-bottom: 10px;
+}
+
+.footer-bottom {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 50px;
+    margin-top: 5px;
+    font-size: 0.9rem;
+    color: var(--text-light);
+    opacity: 0.8;
+}
+
+
+.footer a {
+    color: var(--accent-color);
+    text-decoration: none;
+}
+.footer a:hover {
+    text-decoration: underline;
+}
+.footer-logo {
+    height: 90px;
+    width: auto;
+}
+@media (max-width: 768px) {
+    .footer-logo {
+        height: 60px;
+    }
+}
+/* ===== Popup Modal ===== */
+.modal-content {
+    border-radius: 10px;
+    padding: 20px;
+}
+
+.modal-content .text-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.model-content .text-center p{
+    font-size: 0.9rem;
+    color: #444;
+    margin: 0;
+}
+
+.modal-content .text-center a {
+    color: var(--accent-color);
+    text-decoration: none;
+    font-weight: 600;
+    margin-left: 5px;
+}
+
+.modal-content .text-center a:hover {
+    text-decoration: underline;
+}
+
+.modal-header {
+    border-bottom: none;
+}
+.modal-footer {
+    border-top: none;
+}
+.btn-primary {
+    background-color: var(--accent-color);
+    border: none;
+}
+.btn-primary:hover {
+    background-color: #e68a00;
+}
+
+/* Responsive image adjustments */
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* ===== Social Links Container ===== */
+.social-links {
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center;
+    gap: 2px; /* Space between icons */
+    flex-wrap: wrap; /* Responsive wrap on small screens */
+}
+
+/* ===== Social Links ===== */
+.social-links a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    margin: 0 5px;
+    border-radius: 50%;
+    background-color: var(--accent-color);
+    color: var(--text-light);
+    font-size: 1.5rem;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.social-links a:hover {
+    background-color: #e68a00;
+    transform: translateY(-2px);
+}
+
+/*responsive scaling*/
+@media (max-width: 992px) {
+    .social-links a {
+        width: 30px;
+        height: 30px;
+        font-size: 1rem;
+    }
+    .footer-logo {
+        height: 40px; /* Adjust logo size for smaller screens */
+    }
+}
+
+@media (max-width: 576px) {
+    .social-links a {
+        width: 25px;
+        height: 25px;
+        font-size: 0.5rem;
+    }
+    .footer-logo {
+        height: 35px; /* Further adjust logo size for extra small screens */
+    }
+}
+
+/* ===== Contact Info Container ===== */
+.contact-info {
+    display: flex;
+    flex-direction: column; /* Stack vertically by default */
+    align-items: flex-start;
+    gap: 5px;
+}
+@media (min-width: 768px) {
+    .contact-info {
+        flex-direction: column; /* Keep vertical on tablets/desktops for clarity */
+        align-items: flex-start;
+    }
+}
+
+/* ===== Contact Info Icons ===== */
+.footer i {
+    color: var(--text-light);
+    margin-right: 4px;
+    margin-left: 4px;
+    font-size: 1.2rem;
+}
+
+/* Align icons with text inside p tags */
+.contact-info p {
+    display: flex;
+    align-items: center;
+    margin: 0;
+}
+
+/* Align icons with text */
+.footer p,
+.footer a {
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Centers text in footer */
+    margin-bottom: 5px;
+}
+
+/* Responsive icon size */
+@media (max-width: 768px) {
+    .footer i {
+        font-size: 1rem;
+    }
+}
+@media (min-width: 1200px) {
+    .footer i {
+        font-size: 1.4rem;
+    }
+}
